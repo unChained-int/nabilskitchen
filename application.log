@@ -1,0 +1,302 @@
+2024-12-22 15:27:35,043 - INFO - Starting application
+2024-12-22 15:27:35,342 - INFO - Database connection successful
+2024-12-22 15:34:24,926 - INFO - Starting application
+2024-12-22 15:34:25,226 - INFO - Database connection successful
+2024-12-22 15:34:28,351 - ERROR - Fehler beim Laden der Demo-Daten: 'AccountingSoftware' object has no attribute 'customers'
+2024-12-22 15:35:02,342 - ERROR - Error showing dashboard: 'AccountingSoftware' object has no attribute 'customers'
+2024-12-22 15:36:24,272 - INFO - Starting application
+2024-12-22 15:36:24,598 - INFO - Database connection successful
+2024-12-22 15:36:24,598 - INFO - Collections initialized successfully
+2024-12-22 15:36:39,135 - ERROR - Fehler beim Aktualisieren der Kundenliste: 'name'
+2024-12-22 15:36:53,099 - ERROR - Fehler beim Löschen eines Kunden: module 'pymongo' has no attribute 'ObjectId'
+2024-12-22 15:36:59,073 - ERROR - Fehler beim Aktualisieren der Bestandsliste: 'item'
+2024-12-22 15:38:26,403 - INFO - Starting application
+2024-12-22 15:38:26,737 - INFO - Database connection successful
+2024-12-22 15:38:26,737 - INFO - Collections initialized successfully
+2024-12-22 15:50:46,769 - INFO - Starting application
+2024-12-22 15:50:47,036 - INFO - Database connection successful
+2024-12-22 15:50:47,036 - INFO - Collections initialized successfully
+2024-12-22 15:50:53,813 - ERROR - Fehler beim Aktualisieren der Kundenliste: 'name'
+2024-12-22 15:51:06,772 - ERROR - Fehler beim Löschen eines Kunden: module 'pymongo' has no attribute 'ObjectId'
+2024-12-22 15:51:25,079 - ERROR - Fehler beim Aktualisieren der Bestandsliste: 'item'
+2024-12-22 15:53:56,224 - INFO - Starting application
+2024-12-22 15:53:56,555 - INFO - Database connection successful
+2024-12-22 15:53:56,555 - INFO - Collections initialized successfully
+2024-12-22 15:54:05,905 - ERROR - Fehler beim Aktualisieren der Kundenliste: 'name'
+2024-12-22 15:54:18,390 - ERROR - Fehler beim Löschen eines Kunden: module 'pymongo' has no attribute 'ObjectId'
+2024-12-22 15:55:23,434 - INFO - Starting application
+2024-12-22 15:55:23,710 - INFO - Database connection successful
+2024-12-22 15:55:23,710 - INFO - Collections initialized successfully
+2024-12-22 15:55:35,678 - ERROR - Fehler beim Aktualisieren der Kundenliste: 'name'
+2024-12-22 15:55:54,018 - ERROR - Fehler beim Löschen eines Kunden: module 'pymongo' has no attribute 'ObjectId'
+2024-12-22 15:56:00,054 - ERROR - Fehler beim Aktualisieren der Bestandsliste: 'item'
+2024-12-22 15:56:19,556 - ERROR - Fehler beim Aktualisieren der Bestandsliste: 'item'
+2024-12-22 15:56:27,201 - ERROR - Fehler beim Aktualisieren der Bestandsliste: 'item'
+2024-12-22 15:58:02,817 - INFO - Starting application
+2024-12-22 15:58:03,194 - INFO - Database connection successful
+2024-12-22 15:58:03,194 - INFO - Collections initialized successfully
+2024-12-22 15:58:12,666 - ERROR - Fehler beim Aktualisieren der Kundenliste: 'name'
+2024-12-22 15:58:21,688 - ERROR - Fehler beim Löschen eines Kunden: module 'pymongo' has no attribute 'ObjectId'
+2024-12-22 15:58:25,143 - ERROR - Fehler beim Aktualisieren der Bestandsliste: 'item'
+2024-12-22 15:59:58,471 - INFO - Starting application
+2024-12-22 15:59:58,758 - INFO - Database connection successful
+2024-12-22 15:59:58,758 - INFO - Collections initialized successfully
+2024-12-22 16:00:06,899 - ERROR - Fehler beim Aktualisieren der Bestandsliste: 'item'
+2024-12-22 16:00:10,680 - ERROR - Fehler beim Aktualisieren der Bestandsliste: 'item'
+2024-12-22 16:00:13,548 - ERROR - Fehler beim Aktualisieren der Kundenliste: 'name'
+2024-12-22 16:00:28,937 - ERROR - Fehler beim Aktualisieren der Kundenliste: 'name'
+2024-12-22 16:00:33,879 - ERROR - Fehler beim Aktualisieren der Kundenliste: 'name'
+2024-12-22 16:01:26,399 - ERROR - Fehler beim Aktualisieren der Kundenliste: 'name'
+2024-12-22 16:01:31,361 - ERROR - Fehler beim Aktualisieren der Kundenliste: 'name'
+2024-12-22 16:01:34,555 - ERROR - Fehler beim Aktualisieren der Bestandsliste: 'item'
+2024-12-22 16:01:46,898 - ERROR - Fehler beim Aktualisieren der Bestandsliste: 'item'
+2024-12-22 16:04:43,970 - INFO - Starting application
+2024-12-22 16:04:44,243 - INFO - Database connection successful
+2024-12-22 16:04:44,243 - INFO - Collections initialized successfully
+2024-12-22 16:04:58,557 - ERROR - Fehler beim Aktualisieren der Kundenliste: 'name'
+2024-12-22 16:05:39,568 - ERROR - Fehler beim Aktualisieren der Bestandsliste: 'item'
+2024-12-22 16:12:14,360 - INFO - Starting application
+2024-12-22 16:12:14,643 - INFO - Database connection successful
+2024-12-22 16:12:14,643 - INFO - Collections initialized successfully
+2024-12-22 16:12:23,778 - ERROR - Fehler beim Aktualisieren der Kundenliste: 'name'
+2024-12-22 16:12:56,466 - ERROR - Fehler beim Aktualisieren der Kundenliste: 'name'
+2024-12-22 16:21:48,912 - INFO - Starting application
+2024-12-22 16:21:49,225 - INFO - Database connection successful
+2024-12-22 16:21:49,225 - INFO - Collections initialized successfully
+2024-12-22 16:21:56,531 - ERROR - Fehler beim Aktualisieren der Kundenliste: 'name'
+2024-12-22 16:22:15,728 - ERROR - Fehler beim Aktualisieren der Kundenliste: 'name'
+2024-12-22 16:22:23,082 - ERROR - Fehler beim Aktualisieren der Bestandsliste: 'item'
+2024-12-22 16:22:55,399 - ERROR - Fehler beim Aktualisieren der Kundenliste: 'name'
+2024-12-23 14:27:09,301 - INFO - Starting application
+2024-12-23 14:32:30,975 - INFO - Starting application
+2024-12-23 14:32:33,143 - INFO - Database connection successful
+2024-12-23 14:32:33,143 - INFO - Collections initialized successfully
+2024-12-23 14:32:36,373 - INFO - Encryption setup complete
+2024-12-23 14:32:36,375 - ERROR - Transition to main application failed: 'AccountingSoftware' object has no attribute 'show_customer_management'
+2024-12-23 14:41:33,539 - INFO - Starting application
+2024-12-23 14:41:37,569 - INFO - Database connection successful
+2024-12-23 14:41:37,569 - INFO - Collections initialized successfully
+2024-12-23 14:41:50,558 - ERROR - Fehler beim Aktualisieren der Kundenliste: 'name'
+2024-12-23 14:42:03,673 - ERROR - Fehler beim Aktualisieren der Bestandsliste: 'item'
+2024-12-23 14:42:32,547 - INFO - Starting application
+2024-12-23 14:42:32,973 - INFO - Database connection successful
+2024-12-23 14:42:32,973 - INFO - Collections initialized successfully
+2024-12-23 14:46:52,674 - INFO - Starting application
+2024-12-23 14:46:56,238 - INFO - Database connection successful
+2024-12-23 14:46:56,238 - INFO - Collections initialized successfully
+2024-12-23 14:47:07,250 - ERROR - Fehler beim Aktualisieren der Kundenliste: 'name'
+2024-12-23 14:47:15,708 - ERROR - Fehler beim Aktualisieren der Bestandsliste: 'item'
+2024-12-23 14:53:13,807 - INFO - Starting application
+2024-12-23 14:53:15,443 - INFO - Database connection successful
+2024-12-23 14:53:15,443 - INFO - Collections initialized successfully
+2024-12-23 14:53:27,410 - ERROR - Fehler beim Aktualisieren der Kundenliste: 'name'
+2024-12-23 14:53:36,916 - ERROR - Fehler beim Aktualisieren der Bestandsliste: 'item'
+2024-12-23 14:58:40,921 - INFO - Starting application
+2024-12-23 14:58:41,202 - INFO - Database connection successful
+2024-12-23 14:58:41,202 - INFO - Collections initialized successfully
+2024-12-23 14:58:55,679 - ERROR - Fehler beim Aktualisieren der Kundenliste: 'name'
+2024-12-23 14:58:59,431 - ERROR - Fehler beim Aktualisieren der Kundenliste: 'name'
+2024-12-23 14:59:02,928 - ERROR - Fehler beim Aktualisieren der Kundenliste: 'name'
+2024-12-23 14:59:06,433 - ERROR - Fehler beim Aktualisieren der Kundenliste: 'name'
+2024-12-23 14:59:10,673 - ERROR - Fehler beim Aktualisieren der Bestandsliste: 'item'
+2024-12-23 14:59:13,376 - ERROR - Fehler beim Aktualisieren der Bestandsliste: 'item'
+2024-12-23 15:04:43,964 - INFO - Starting application
+2024-12-23 15:04:44,264 - INFO - Database connection successful
+2024-12-23 15:04:44,264 - INFO - Collections initialized successfully
+2024-12-23 15:04:56,394 - ERROR - Fehler beim Aktualisieren der Kundenliste: 'name'
+2024-12-23 15:04:59,697 - ERROR - Fehler beim Aktualisieren der Kundenliste: 'name'
+2024-12-23 15:05:06,721 - ERROR - Fehler beim Aktualisieren der Bestandsliste: 'item'
+2024-12-23 15:05:13,424 - ERROR - Fehler beim Aktualisieren der Bestandsliste: 'item'
+2024-12-23 15:05:21,272 - ERROR - Error refreshing contracts: 'projected_revenue'
+2024-12-23 15:05:38,377 - ERROR - Error refreshing contracts: 'projected_revenue'
+2024-12-23 15:12:45,114 - INFO - Starting application
+2024-12-23 15:12:45,413 - INFO - MongoDB Atlas connection successful
+2024-12-23 15:12:45,413 - ERROR - Error creating indexes: 'AccountingSoftware' object has no attribute 'customers'
+2024-12-23 15:12:45,413 - INFO - Collections initialized successfully
+2024-12-23 15:12:59,179 - ERROR - Fehler beim Aktualisieren der Kundenliste: 'name'
+2024-12-23 15:13:02,375 - ERROR - Fehler beim Aktualisieren der Kundenliste: 'name'
+2024-12-23 15:13:05,232 - ERROR - Fehler beim Aktualisieren der Kundenliste: 'name'
+2024-12-23 15:13:08,824 - ERROR - Fehler beim Aktualisieren der Bestandsliste: 'item'
+2024-12-23 15:13:11,204 - ERROR - Fehler beim Aktualisieren der Bestandsliste: 'item'
+2024-12-23 15:13:21,331 - ERROR - Fehler beim Aktualisieren der Bestandsliste: 'item'
+2024-12-23 15:13:24,702 - ERROR - Error refreshing contracts: 'projected_revenue'
+2024-12-23 15:16:06,135 - INFO - Starting application
+2024-12-23 15:16:07,540 - ERROR - Error initializing collections: Index build failed: 95d8e6cc-0a26-488f-98f7-812ce8e6ea73: Collection unChainedInt.inventory ( 59bf9124-bf70-46a7-a420-60716121de45 ) :: caused by :: E11000 duplicate key error collection: unChainedInt.inventory index: item_1 dup key: { item: null }, full error: {'ok': 0.0, 'errmsg': 'Index build failed: 95d8e6cc-0a26-488f-98f7-812ce8e6ea73: Collection unChainedInt.inventory ( 59bf9124-bf70-46a7-a420-60716121de45 ) :: caused by :: E11000 duplicate key error collection: unChainedInt.inventory index: item_1 dup key: { item: null }', 'code': 11000, 'codeName': 'DuplicateKey', 'keyPattern': {'item': 1}, 'keyValue': {'item': None}, '$clusterTime': {'clusterTime': Timestamp(1734963367, 6), 'signature': {'hash': b"1Dl\x08\xd38\xa3\xfaN\xdfe\x82\xdc\xa1\x0f\xa9'\xd8x\xea", 'keyId': 7394530809954172929}}, 'operationTime': Timestamp(1734963367, 6)}
+2024-12-23 15:16:07,540 - ERROR - Database connection failed: Index build failed: 95d8e6cc-0a26-488f-98f7-812ce8e6ea73: Collection unChainedInt.inventory ( 59bf9124-bf70-46a7-a420-60716121de45 ) :: caused by :: E11000 duplicate key error collection: unChainedInt.inventory index: item_1 dup key: { item: null }, full error: {'ok': 0.0, 'errmsg': 'Index build failed: 95d8e6cc-0a26-488f-98f7-812ce8e6ea73: Collection unChainedInt.inventory ( 59bf9124-bf70-46a7-a420-60716121de45 ) :: caused by :: E11000 duplicate key error collection: unChainedInt.inventory index: item_1 dup key: { item: null }', 'code': 11000, 'codeName': 'DuplicateKey', 'keyPattern': {'item': 1}, 'keyValue': {'item': None}, '$clusterTime': {'clusterTime': Timestamp(1734963367, 6), 'signature': {'hash': b"1Dl\x08\xd38\xa3\xfaN\xdfe\x82\xdc\xa1\x0f\xa9'\xd8x\xea", 'keyId': 7394530809954172929}}, 'operationTime': Timestamp(1734963367, 6)}
+2024-12-23 15:23:42,622 - INFO - Starting application
+2024-12-23 15:23:43,386 - INFO - Indexes created successfully
+2024-12-23 15:23:43,388 - INFO - Collections initialized successfully
+2024-12-23 15:23:43,388 - INFO - MongoDB Atlas connection successful
+2024-12-23 15:23:43,388 - INFO - Collections initialized successfully
+2024-12-23 15:23:43,450 - INFO - Added 2 demo customers
+2024-12-23 15:23:43,466 - INFO - Added 2 demo inventory items
+2024-12-23 15:25:39,409 - ERROR - Error refreshing contracts: 'projected_revenue'
+2024-12-23 15:26:08,840 - ERROR - Error refreshing contracts: 'projected_revenue'
+2024-12-23 15:26:12,865 - ERROR - Error refreshing contracts: 'projected_revenue'
+2024-12-23 15:47:31,506 - INFO - Starting application
+2024-12-23 15:47:32,111 - INFO - Indexes created successfully
+2024-12-23 15:47:32,111 - INFO - Collections initialized successfully
+2024-12-23 15:47:32,111 - INFO - MongoDB Atlas connection successful
+2024-12-23 15:47:32,111 - INFO - Collections initialized successfully
+2024-12-23 15:47:32,161 - INFO - Added 2 demo customers
+2024-12-23 15:47:32,190 - INFO - Added 2 demo inventory items
+2024-12-23 15:47:35,518 - ERROR - Error creating monthly chart: 'AccountingSoftware' object has no attribute 'get_monthly_data'
+2024-12-23 15:47:40,186 - ERROR - Error creating monthly chart: 'AccountingSoftware' object has no attribute 'get_monthly_data'
+2024-12-23 15:48:26,410 - ERROR - Error refreshing contracts: 'projected_revenue'
+2024-12-23 15:51:37,408 - INFO - Starting application
+2024-12-23 15:51:38,128 - INFO - Indexes created successfully
+2024-12-23 15:51:38,128 - INFO - Collections initialized successfully
+2024-12-23 15:51:38,130 - INFO - MongoDB Atlas connection successful
+2024-12-23 15:51:38,130 - INFO - Collections initialized successfully
+2024-12-23 15:51:38,170 - INFO - Added 2 demo customers
+2024-12-23 15:51:38,191 - INFO - Added 2 demo inventory items
+2024-12-23 15:51:42,020 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 15:51:51,101 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 15:51:53,386 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 15:52:30,627 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 15:52:31,406 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 15:56:19,679 - INFO - Starting application
+2024-12-23 15:56:20,436 - INFO - Indexes created successfully
+2024-12-23 15:56:20,436 - INFO - Collections initialized successfully
+2024-12-23 15:56:20,436 - INFO - MongoDB Atlas connection successful
+2024-12-23 15:56:20,443 - INFO - Collections initialized successfully
+2024-12-23 15:56:20,483 - INFO - Added 2 demo customers
+2024-12-23 15:56:20,506 - INFO - Added 2 demo inventory items
+2024-12-23 15:56:24,329 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 15:56:57,117 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 15:57:05,859 - ERROR - Error refreshing contracts: 'projected_revenue'
+2024-12-23 16:03:48,906 - INFO - Starting application
+2024-12-23 16:03:50,132 - INFO - Indexes created successfully
+2024-12-23 16:03:50,132 - INFO - Collections initialized successfully
+2024-12-23 16:03:50,132 - INFO - MongoDB Atlas connection successful
+2024-12-23 16:03:50,132 - INFO - Collections initialized successfully
+2024-12-23 16:03:50,183 - INFO - Added 2 demo customers
+2024-12-23 16:03:50,210 - INFO - Added 2 demo inventory items
+2024-12-23 16:03:54,564 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 16:03:58,599 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 16:06:34,256 - INFO - Starting application
+2024-12-23 16:06:35,170 - INFO - Indexes created successfully
+2024-12-23 16:06:35,170 - INFO - Collections initialized successfully
+2024-12-23 16:06:35,170 - INFO - MongoDB Atlas connection successful
+2024-12-23 16:06:35,171 - INFO - Collections initialized successfully
+2024-12-23 16:06:35,220 - INFO - Added 2 demo customers
+2024-12-23 16:06:35,273 - INFO - Added 2 demo inventory items
+2024-12-23 16:06:39,688 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 16:06:43,470 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 16:07:00,271 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 16:11:09,805 - INFO - Starting application
+2024-12-23 16:11:10,455 - INFO - Indexes created successfully
+2024-12-23 16:11:10,455 - INFO - Collections initialized successfully
+2024-12-23 16:11:10,455 - INFO - MongoDB Atlas connection successful
+2024-12-23 16:11:10,457 - INFO - Collections initialized successfully
+2024-12-23 16:11:10,492 - INFO - Added 2 demo customers
+2024-12-23 16:11:10,515 - INFO - Added 2 demo inventory items
+2024-12-23 16:11:14,565 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 16:15:06,850 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 16:15:07,600 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 16:15:08,174 - ERROR - Error refreshing contracts: 'projected_revenue'
+2024-12-23 16:16:24,535 - INFO - Starting application
+2024-12-23 16:16:25,497 - INFO - Indexes created successfully
+2024-12-23 16:16:25,497 - INFO - Collections initialized successfully
+2024-12-23 16:16:25,497 - INFO - MongoDB Atlas connection successful
+2024-12-23 16:16:25,497 - INFO - Collections initialized successfully
+2024-12-23 16:16:25,560 - INFO - Added 2 demo customers
+2024-12-23 16:16:25,596 - INFO - Added 2 demo inventory items
+2024-12-23 16:16:29,372 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 16:16:34,287 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 16:16:34,571 - ERROR - Error refreshing contracts: 'projected_revenue'
+2024-12-23 16:16:38,821 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 16:19:10,528 - INFO - Starting application
+2024-12-23 16:19:11,227 - INFO - Indexes created successfully
+2024-12-23 16:19:11,227 - INFO - Collections initialized successfully
+2024-12-23 16:19:11,227 - INFO - MongoDB Atlas connection successful
+2024-12-23 16:19:11,227 - INFO - Collections initialized successfully
+2024-12-23 16:19:11,546 - INFO - Added 2 demo customers
+2024-12-23 16:19:11,582 - INFO - Added 2 demo inventory items
+2024-12-23 16:19:15,474 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 16:19:19,173 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 17:09:33,325 - INFO - Starting application
+2024-12-23 17:09:34,942 - INFO - Indexes created successfully
+2024-12-23 17:09:34,942 - INFO - Collections initialized successfully
+2024-12-23 17:09:34,942 - INFO - MongoDB Atlas connection successful
+2024-12-23 17:09:34,942 - INFO - Collections initialized successfully
+2024-12-23 17:09:35,033 - INFO - Added 2 demo customers
+2024-12-23 17:09:35,058 - INFO - Added 2 demo inventory items
+2024-12-23 17:09:35,108 - ERROR - Error checking email: [Errno 11001] getaddrinfo failed
+2024-12-23 17:09:39,709 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 17:14:30,024 - INFO - Starting application
+2024-12-23 17:14:30,834 - INFO - Indexes created successfully
+2024-12-23 17:14:30,834 - INFO - Collections initialized successfully
+2024-12-23 17:14:30,834 - INFO - MongoDB Atlas connection successful
+2024-12-23 17:14:30,834 - INFO - Collections initialized successfully
+2024-12-23 17:14:30,896 - INFO - Added 2 demo customers
+2024-12-23 17:14:30,912 - INFO - Added 2 demo inventory items
+2024-12-23 17:14:30,960 - ERROR - Error checking email: [Errno 11001] getaddrinfo failed
+2024-12-23 17:14:35,038 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 17:14:40,650 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 17:16:19,762 - INFO - Starting application
+2024-12-23 17:16:20,877 - INFO - Indexes created successfully
+2024-12-23 17:16:20,877 - INFO - Collections initialized successfully
+2024-12-23 17:16:20,877 - INFO - MongoDB Atlas connection successful
+2024-12-23 17:16:20,877 - INFO - Collections initialized successfully
+2024-12-23 17:16:20,941 - INFO - Added 2 demo customers
+2024-12-23 17:16:20,957 - INFO - Added 2 demo inventory items
+2024-12-23 17:16:21,009 - ERROR - Error checking email: [Errno 11001] getaddrinfo failed
+2024-12-23 17:16:25,797 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 17:22:52,127 - INFO - Starting application
+2024-12-23 17:22:54,767 - INFO - Indexes created successfully
+2024-12-23 17:22:54,767 - INFO - Collections initialized successfully
+2024-12-23 17:22:54,767 - INFO - MongoDB Atlas connection successful
+2024-12-23 17:22:54,767 - INFO - Collections initialized successfully
+2024-12-23 17:22:55,151 - INFO - Added 2 demo customers
+2024-12-23 17:22:55,177 - INFO - Added 2 demo inventory items
+2024-12-23 17:22:55,226 - ERROR - Error checking email: [Errno 11001] getaddrinfo failed
+2024-12-23 17:22:59,639 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 17:23:45,998 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 17:24:11,385 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 17:24:12,897 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 17:24:16,822 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 17:24:31,993 - ERROR - Error refreshing contracts: 'projected_revenue'
+2024-12-23 17:24:37,827 - ERROR - Error refreshing contracts: 'projected_revenue'
+2024-12-23 17:25:22,095 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 17:25:24,094 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 17:25:25,336 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 17:25:33,709 - ERROR - Error refreshing contracts: 'projected_revenue'
+2024-12-23 17:25:54,469 - ERROR - Error refreshing contracts: 'projected_revenue'
+2024-12-23 17:26:01,095 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 17:26:04,001 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 17:26:07,386 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 17:26:23,561 - INFO - Starting application
+2024-12-23 17:26:28,907 - ERROR - Could not connect to MongoDB Atlas: No replica set members match selector "Primary()", Timeout: 5.0s, Topology Description: <TopologyDescription id: 67698f2f7146d2927eb6fcf0, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('ac-iiiiot3-shard-00-00.kezbfis.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.047000000000025466>, <ServerDescription ('ac-iiiiot3-shard-00-01.kezbfis.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-iiiiot3-shard-00-02.kezbfis.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.047000000000025466>]>
+2024-12-23 17:26:40,720 - INFO - Starting application
+2024-12-23 17:26:50,740 - ERROR - Database connection failed: The DNS operation timed out after 10.00397539138794 seconds
+2024-12-23 17:27:18,199 - INFO - Starting application
+2024-12-23 17:27:18,853 - INFO - Indexes created successfully
+2024-12-23 17:27:18,853 - INFO - Collections initialized successfully
+2024-12-23 17:27:18,853 - INFO - MongoDB Atlas connection successful
+2024-12-23 17:27:18,853 - INFO - Collections initialized successfully
+2024-12-23 17:27:18,886 - INFO - Added 2 demo customers
+2024-12-23 17:27:18,902 - INFO - Added 2 demo inventory items
+2024-12-23 17:27:18,949 - ERROR - Error checking email: [Errno 11001] getaddrinfo failed
+2024-12-23 17:27:22,358 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 17:27:27,338 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 18:05:42,122 - INFO - Starting application
+2024-12-23 18:05:46,038 - INFO - Indexes created successfully
+2024-12-23 18:05:46,038 - INFO - Collections initialized successfully
+2024-12-23 18:05:46,038 - INFO - MongoDB Atlas connection successful
+2024-12-23 18:05:46,038 - INFO - Collections initialized successfully
+2024-12-23 18:05:46,081 - INFO - Added 2 demo customers
+2024-12-23 18:05:46,111 - INFO - Added 2 demo inventory items
+2024-12-23 18:05:46,384 - ERROR - Error checking email: [Errno 11001] getaddrinfo failed
+2024-12-23 18:05:50,332 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 18:06:14,422 - ERROR - Error refreshing contracts: 'projected_revenue'
+2024-12-23 18:06:46,659 - ERROR - Error refreshing contracts: 'projected_revenue'
+2024-12-23 18:06:52,878 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 18:08:09,707 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 18:08:10,746 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 18:08:59,792 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 18:09:10,045 - ERROR - Error calculating tax reserves: 'NoneType' object has no attribute 'get'
+2024-12-23 18:09:23,812 - INFO - Starting application
+2024-12-23 18:09:31,222 - ERROR - Could not connect to MongoDB Atlas: No replica set members match selector "Primary()", Timeout: 5.0s, Topology Description: <TopologyDescription id: 67699945cebd184d26f0504a, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('ac-iiiiot3-shard-00-00.kezbfis.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.015000000000327418>, <ServerDescription ('ac-iiiiot3-shard-00-01.kezbfis.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-iiiiot3-shard-00-02.kezbfis.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.015000000000327418>]>
+2024-12-23 18:09:52,196 - INFO - Starting application
+2024-12-23 18:09:57,675 - ERROR - Could not connect to MongoDB Atlas: No replica set members match selector "Primary()", Timeout: 5.0s, Topology Description: <TopologyDescription id: 67699960f7e0173aa18ebde7, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('ac-iiiiot3-shard-00-00.kezbfis.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.06300000000010186>, <ServerDescription ('ac-iiiiot3-shard-00-01.kezbfis.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-iiiiot3-shard-00-02.kezbfis.mongodb.net', 27017) server_type: RSSecondary, rtt: 0.016000000000531145>]>

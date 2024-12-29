@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin-Bereich</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <link rel="stylesheet" href="index.css" media="screen">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #45a049;
+        }
+        .order-list {
+            margin-top: 20px;
+        }
+        .order-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body class="u-body u-xl-mode" data-lang="de">
+    <header class="u-grey-70 u-header" id="sec-33a9">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
+                <div class="menu-collapse">
+                    <a class="u-button-style u-nav-link" href="#">
+                        <svg class="u-svg-link" viewBox="0 0 24 24"><use xlink:href="#menu-hamburger"></use></svg>
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><symbol id="menu-hamburger" viewBox="0 0 16 16"><rect y="1" width="16" height="2"></rect><rect y="4" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect></symbol></defs></svg>
+                    </a>
+                </div>
+                <div class="u-nav-container">
+                    <ul class="u-nav u-unstyled u-nav-1">
+
+                        <li class="u-nav-item"><a class="u-button-style u-nav-link" href="admin.html">Admin-Bereich</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <img class="u-image u-image-default u-preserve-proportions u-image-1" src="images/NabilsKitchen.jpeg" alt="" data-image-width="1024" data-image-height="1024">
+        </div>
+    </header>
+    <section class="u-clearfix u-section-1" id="sec-9f94">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <div class="u-align-center u-container-style u-group u-radius-20 u-shape-round u-white u-group-1">
+                <div class="u-container-layout u-container-layout-1">
+                    <h2 class="u-text u-text-1">Admin-Bereich</h2>
+                    <div id="order-list" class="order-list"></div>
+                    <div class="form-group">
+                        <button id="load-orders">Tägliche Bestellungen anzeigen</button>
+                    </div>
+                    <div class="form-group">
+                        <label for="start-time">Bestellstartzeit:</label>
+                        <input type="time" id="start-time" name="start-time">
+                    </div>
+                    <div class="form-group">
+                        <label for="end-time">Bestellendzeit:</label>
+                        <input type="time" id="end-time" name="end-time">
+                    </div>
+                    <div class="form-group">
+                        <button id="set-order-times">Bestellzeiten festlegen</button>
+                    </div>
+                    <div class="form-group">
+                        <label for="refund-username">Benutzername für Rückerstattung:</label>
+                        <input type="text" id="refund-username" name="refund-username">
+                    </div>
+                    <div class="form-group">
+                        <label for="refund-amount">Rückerstattungsbetrag:</label>
+                        <input type="number" id="refund-amount" name="refund-amount">
+                    </div>
+                    <div class="form-group">
+                        <button id="process-refund">Rückerstattung durchführen</button>
+                    </div>
+                    <div class="form-group">
+                        <label for="code-amount">Betrag für Guthabencode:</label>
+                        <input type="number" id="code-amount" name="code-amount">
+                    </div>
+                    <div class="form-group">
+                        <button id="generate-code">Guthabencode generieren</button>
+                    </div>
+                    <div class="form-group">
+                        <button id="start-bonus-program">Bonusprogramm starten</button>
+                        <button id="end-bonus-program">Bonusprogramm beenden</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-224c">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <p class="u-small-text u-text u-text-variant u-text-1">© 2024 Nabil's Kitchen</p>
+            <p class="u-small-text u-text u-text-variant u-text-2">Designed by <a href="#" class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">unChained</a></p>
+        </div>
+    </footer>
+    <script>
+        $(document).ready(function() {
+            function loadOrders() {
+                $.ajax({
+                    url: '/api/daily-orders',
+                    type: 'GET',
+                    success: function(data) {
+                        if (data.success) {
+                            const orders = data.orders;
+                            const orderList = $('#order-list');
+                            orderList.empty();
+                            orders.forEach(order => {
+                                const orderItem = $('<div class="order-item"></div>');
+                                orderItem.append(`<p>Bestellnummer: ${order._id}</p>`);
+                                orderItem.append(`<p>Benutzername: ${order.username}</p>`);
+                                orderItem.append(`<p>Bestellzeit: ${order.order_time}</p>`);
+                                orderItem.append(`<p>Artikel:</p>`);
+                                const itemList = $('<ul></ul>');
+                                order.items.forEach(item => {
+                                    itemList.append(`<li>${item.name} - ${item.quantity}</li>`);
+                                });
+                                orderItem.append(itemList);
+                                orderItem.append(`<button class="complete-order" data-id="${order._id}">Erledigt</button>`);
+                                orderList.append(orderItem);
+                            });
+                        } else {
+                            alert('Fehler beim Laden der Bestellungen: ' + data.message);
+                        }
+                    }
+                });
+            }
+
+            $('#load-orders').click(loadOrders);
+
+            $(document).on('click', '.complete-order', function() {
+                const orderId = $(this).data('id');
+                $.ajax({
+                    url: '/api/complete-order',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({ order_id: orderId }),
+                    success: function(data) {
+                        if (data.success) {
+                            alert(data.message);
+                            loadOrders();
+                        } else {
+                            alert('Fehler beim Abschließen der Bestellung: ' + data.message);
+                        }
+                    }
+                });
+            });
+
+            $('#set-order-times').click(function() {
+                const startTime = $('#start-time').val();
+                const endTime = $('#end-time').val();
+                $.ajax({
+                    url: '/api/set-order-times',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({ start_time: startTime, end_time: endTime }),
+                    success: function(data) {
+                        if (data.success) {
+                            alert(data.message);
+                        } else {
+                            alert('Fehler beim Festlegen der Bestellzeiten: ' + data.message);
+                        }
+                    }
+                });
+            });
+
+            $('#process-refund').click(function() {
+                const username = $('#refund-username').val();
+                const amount = parseFloat($('#refund-amount').val());
+                $.ajax({
+                    url: '/api/refund',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({ username: username, amount: amount }),
+                    success: function(data) {
+                        if (data.success) {
+                            alert(data.message);
+                        } else {
+                            alert('Fehler bei der Rückerstattung: ' + data.message);
+                        }
+                    }
+                });
+            });
+
+            $('#generate-code').click(function() {
+                const amount = parseFloat($('#code-amount').val());
+                $.ajax({
+                    url: '/api/generate-code',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({ amount: amount }),
+                    success: function(data) {
+                        if (data.success) {
+                            alert('Guthabencode generiert: ' + data.code);
+                        } else {
+                            alert('Fehler beim Generieren des Guthabencodes: ' + data.message);
+                        }
+                    }
+                });
+            });
+
+            $('#start-bonus-program').click(function() {
+                $.ajax({
+                    url: '/api/start-bonus-program',
+                    type: 'POST',
+                    success: function(data) {
+                        if (data.success) {
+                            alert(data.message);
+                        } else {
+                            alert('Fehler beim Starten des Bonusprogramms: ' + data.message);
+                        }
+                    }
+                });
+            });
+
+            $('#end-bonus-program').click(function() {
+                $.ajax({
+                    url: '/api/end-bonus-program',
+                    type: 'POST',
+                    success: function(data) {
+                        if (data.success) {
+                            alert(data.message);
+                        } else {
+                            alert('Fehler beim Beenden des Bonusprogramms: ' + data.message);
+                        }
+                    }
+                });
+            });
+
+            // Auto-refresh orders every minute
+            setInterval(loadOrders, 60000);
+        });
+    </script>
+</body>
+</html>

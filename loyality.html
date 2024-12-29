@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loyalitätsprogramm</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <link rel="stylesheet" href="index.css" media="screen">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            border-radius: 10px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group input[type="number"] {
+            width: calc(100% - 22px);
+        }
+        .form-group .quantity {
+            display: inline-block;
+            width: 50px;
+            margin-left: 10px;
+        }
+        .form-group button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #45a049;
+        }
+        .order-list {
+            margin-top: 20px;
+        }
+        .order-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .notification {
+            display: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        .bonus-points {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .bonus-point {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            margin: 0 5px;
+            background-color: #fff;
+        }
+        .bonus-point.filled {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body class="u-body u-xl-mode" data-lang="de">
+    <header class="u-grey-70 u-header" id="sec-33a9">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
+                <div class="menu-collapse">
+                    <a class="u-button-style u-nav-link" href="#">
+                        <svg class="u-svg-link" viewBox="0 0 24 24"><use xlink:href="#menu-hamburger"></use></svg>
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><symbol id="menu-hamburger" viewBox="0 0 16 16"><rect y="1" width="16" height="2"></rect><rect y="4" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect></symbol></defs></svg>
+                    </a>
+                </div>
+                <div class="u-nav-container">
+                    <ul class="u-nav u-unstyled u-nav-1">
+                        <li class="u-nav-item"><a class="u-button-style u-nav-link" href="index.html">Home</a></li>
+                        <li class="u-nav-item"><a class="u-button-style u-nav-link" href="loyality.html">Account</a></li>
+                        
+                    </ul>
+                </div>
+            </nav>
+            <img class="u-image u-image-default u-preserve-proportions u-image-1" src="images/NabilsKitchen.jpeg" alt="" data-image-width="1024" data-image-height="1024">
+        </div>
+    </header>
+    <section class="u-clearfix u-section-1" id="sec-9f94">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <div class="u-align-center u-container-style u-group u-radius-20 u-shape-round u-white u-group-1">
+                <div class="u-container-layout u-container-layout-1">
+                    <h2 class="u-text u-text-1">Account</h2>
+                    <div id="balance" style="display: none;">Aktueller Kontostand: 0€</div>
+                    <div id="bonus-points" class="bonus-points" style="display: none;">
+                        <div class="bonus-point"></div>
+                        <div class="bonus-point"></div>
+                        <div class="bonus-point"></div>
+                    </div>
+                    <div id="order-section" style="display: none;">
+                        <h2>Bestellung</h2>
+                        <form id="order-form">
+                            <div class="form-group">
+                                <label for="order-type">Bestelltyp:</label>
+                                <select id="order-type" name="order-type">
+                                    <option value="burger">Burger</option>
+                                    <option value="menu">Menü</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="order-item">Artikel:</label>
+                                <select id="order-item" name="order-item">
+                                    <option value="Classic-Ham" data-price="6.50">Classic-Ham - 6.50€</option>
+                                    <option value="Classic-Cheese" data-price="6.00">Classic-Cheese - 6.00€</option>
+                                    <option value="Classic-Chicken" data-price="7.50">Classic-Chicken - 7.50€</option>
+                                    <option value="Classic-Crispy" data-price="6.00">Classic-Crispy - 6.00€</option>
+                                    <option value="Veggie-Burger" data-price="5.50">Veggie-Burger - 5.50€</option>
+                                    <option value="Bacon-Burger" data-price="7.00">Bacon-Burger - 7.00€</option>
+                                    <option value="Onion-Burger" data-price="6.50">Onion-Burger - 6.50€</option>
+                                    <option value="Chillicheese-Burger" data-price="7.00">Chillicheese-Burger - 7.00€</option>
+                                    <option value="Pastrami-Burger" data-price="8.00">Pastrami-Burger - 8.00€</option>
+                                    <option value="Medina-Burger" data-price="7.50">Medina-Burger - 7.50€</option>
+                                    <option value="Juarez-Burger" data-price="7.50">Juarez-Burger - 7.50€</option>
+                                    <option value="BBQ-Burger" data-price="7.00">BBQ-Burger - 7.00€</option>
+                                    <option value="Double-Double-Burger" data-price="9.00">Double-Double-Burger - 9.00€</option>
+                                    <option value="Jamina-Nr-1" data-price="8.50">Jamina's Nr. 1 - 8.50€</option>
+                                    <!-- Add more items similarly for Baguette, SchlemmerEcke, Salate, Getränke, and Toppings -->
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="order-quantity">Anzahl:</label>
+                                <input type="number" id="order-quantity" name="order-quantity" min="1" value="1">
+                            </div>
+                            <div class="form-group">
+                                <label for="order-tip">Trinkgeld:</label>
+                                <input type="number" id="order-tip" name="order-tip" min="0" value="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="order-time">Bestellzeit:</label>
+                                <input type="datetime-local" id="order-time" name="order-time" required>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit">Bestellen</button>
+                            </div>
+                        </form>
+                        <div id="order-notification" class="notification"></div>
+                    </div>
+
+                    <div id="top-up-section" style="display: none;">
+                        <h2>Guthaben aufladen</h2>
+                        <form id="top-up-form">
+                            <div class="form-group">
+                                <label for="top-up-code">Zahlencode:</label>
+                                <input type="text" id="top-up-code" name="top-up-code" required>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit">Aufladen</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div id="auth-modal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <div id="register">
+                                <h2>Registrierung</h2>
+                                <form id="register-form">
+                                    <div class="form-group">
+                                        <label for="reg-username">Benutzername:</label>
+                                        <input type="text" id="reg-username" name="reg-username" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="reg-email">E-Mail:</label>
+                                        <input type="email" id="reg-email" name="reg-email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="reg-password">Passwort:</label>
+                                        <input type="password" id="reg-password" name="reg-password" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit">Registrieren</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div id="login">
+                                <h2>Login</h2>
+                                <form id="login-form">
+                                    <div class="form-group">
+                                        <label for="login-username">Benutzername:</label>
+                                        <input type="text" id="login-username" name="login-username" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="login-password">Passwort:</label>
+                                        <input type="password" id="login-password" name="login-password" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit">Einloggen</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="open-orders" class="order-list" style="display: none;">
+                        <h2>Offene Bestellungen</h2>
+                        <div id="order-items"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-224c">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <p class="u-small-text u-text u-text-variant u-text-1">© 2024 Nabil's Kitchen</p>
+            <p class="u-small-text u-text u-text-variant u-text-2">Designed by <a href="#" class="u-active-none u-border-none u-btn u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">unChained</a></p>
+        </div>
+    </footer>
+    <script>
+        $(document).ready(function() {
+            const modal = document.getElementById("auth-modal");
+            const closeModal = document.getElementsByClassName("close")[0];
+            let currentUsername = '';
+
+            closeModal.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+
+            function updateBalance(balance) {
+                $('#balance').show().text('Aktueller Kontostand: ' + balance + '€');
+            }
+
+            function updateBonusPoints(points) {
+                const bonusPoints = $('#bonus-points');
+                bonusPoints.show();
+                bonusPoints.children().each(function(index) {
+                    if (index < points) {
+                        $(this).addClass('filled');
+                    } else {
+                        $(this).removeClass('filled');
+                    }
+                });
+            }
+
+            $('#register-form').submit(function(event) {
+                event.preventDefault();
+                const username = $('#reg-username').val();
+                const email = $('#reg-email').val();
+                const password = $('#reg-password').val();
+
+                $.ajax({
+                    url: '/api/register',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({ username, email, password }),
+                    success: function(data) {
+                        if (data.success) {
+                            alert('Registrierung erfolgreich! Bitte melden Sie sich an.');
+                        } else {
+                            alert('Fehler bei der Registrierung: ' + data.message);
+                        }
+                    }
+                });
+            });
+
+            $('#login-form').submit(function(event) {
+                event.preventDefault();
+                const username = $('#login-username').val();
+                const password = $('#login-password').val();
+
+                $.ajax({
+                    url: '/api/login',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({ username, password }),
+                    success: function(data) {
+                        if (data.success) {
+                            currentUsername = username;
+                            $('#auth-modal').hide();
+                            $('#order-section').show();
+                            $('#top-up-section').show();
+                            updateBalance(data.balance);
+                            updateBonusPoints(data.bonusPoints);
+                            loadOpenOrders();
+                        } else {
+                            alert('Fehler beim Einloggen: ' + data.message);
+                        }
+                    }
+                });
+            });
+
+            $('#order-form').submit(function(event) {
+                event.preventDefault();
+                const items = [];
+                const itemName = $('#order-item').val();
+                const itemQuantity = parseInt($('#order-quantity').val());
+                items.push({ name: itemName, quantity: itemQuantity });
+                const tip = parseFloat($('#order-tip').val()) || 0;
+                const orderTime = $('#order-time').val();
+
+                $.ajax({
+                    url: '/api/order',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({ items, tip, order_time: orderTime, username: currentUsername }),
+                    success: function(data) {
+                        if (data.success) {
+                            alert('Bestellung erfolgreich! Ihr neuer Kontostand: ' + data.newBalance);
+                            updateBalance(data.newBalance);
+                            updateBonusPoints(data.bonusPoints);
+                            loadOpenOrders();
+                            $('#order-notification').text('Bestellung erfolgreich!').show().delay(3000).fadeOut();
+                        } else {
+                            alert('Fehler bei der Bestellung: ' + data.message);
+                        }
+                    }
+                });
+            });
+
+            $('#top-up-form').submit(function(event) {
+                event.preventDefault();
+                const code = $('#top-up-code').val();
+
+                $.ajax({
+                    url: '/api/top-up',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({ code, username: currentUsername }),
+                    success: function(data) {
+                        if (data.success) {
+                            alert('Guthaben erfolgreich aufgeladen! Ihr neuer Kontostand: ' + data.newBalance);
+                            updateBalance(data.newBalance);
+                        } else {
+                            alert('Fehler beim Aufladen: ' + data.message);
+                        }
+                    }
+                });
+            });
+
+            function loadOpenOrders() {
+                $.ajax({
+                    url: '/api/open-orders',
+                    type: 'GET',
+                    data: { username: currentUsername },
+                    success: function(data) {
+                        if (data.success) {
+                            const orders = data.orders;
+                            const orderItems = $('#order-items');
+                            orderItems.empty();
+                            orders.forEach(order => {
+                                const orderItem = $('<div class="order-item"></div>');
+                                orderItem.append(`<p>Bestellnummer: ${order._id}</p>`);
+                                orderItem.append(`<p>Bestellzeit: ${order.order_time}</p>`);
+                                orderItem.append(`<p>Artikel:</p>`);
+                                const itemList = $('<ul></ul>');
+                                order.items.forEach(item => {
+                                    itemList.append(`<li>${item.name} - ${item.quantity}</li>`);
+                                });
+                                orderItem.append(itemList);
+                                orderItems.append(orderItem);
+                            });
+                            $('#open-orders').show();
+                        } else {
+                            alert('Fehler beim Laden der offenen Bestellungen: ' + data.message);
+                        }
+                    }
+                });
+            }
+
+            // Show modal if not logged in
+            modal.style.display = "block";
+        });
+    </script>
+</body>
+</html>
